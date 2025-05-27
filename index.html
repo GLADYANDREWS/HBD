@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Birthday ABI</title>
+  <title>Birthday Cake with Balloons</title>
   <style>
     @import url('https://fonts.googleapis.com/css?family=Lato:300italic');
     @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
@@ -218,7 +218,7 @@
 
     .waviy {
       position: relative;
-      margin-top: 20px;
+      margin-top: 60px;
       -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
       font-size: 60px;
       text-align: center;
@@ -251,21 +251,23 @@
   }
 
   #cake {
+    overflow:visible;
     transform: scale(0.6);
      margin: -9em auto 0 auto;
      position: relative;
-     top:100px
+     top:90px
     }
     
     .content {
-    margin-top: 20px;
+    margin-top: 40px;
     height: auto;
     text-align: center;
     padding: 0 15px;
+
   }
 
   .content h2 {
-    font-size: 1.8em;
+    font-size: 50px;
     transform: translateY(0);
     margin: 10px 0;
     text-align: center;
@@ -277,13 +279,13 @@
     text-align: center;
   }
   
-   /* .cake {
-    position: absolute;
-    top: 100px;
-    transform: scale(0.8);
-          margin-top: -100px;
+   .cake {
+    /* position: absolute; */
+    /* top: 100px; */
+    /* transform: scale(0.8); */
+     margin-top: -200px;
 
-  }  */
+  } 
 
   .balloon {
     width: 15px;
@@ -321,8 +323,14 @@
     /* Tablet View */
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       #cake {
-        transform: scale(0.8);
-        margin: -7em auto 0 auto;
+        /* transform: scale(0.8);
+        margin: -12em auto 0 auto; */
+
+      transform: scale(0.6);
+     margin: -9em auto 0 auto;
+     position: relative;
+     top:90px
+
       }
       
       .content h2 {
@@ -337,11 +345,11 @@
       
       .cake {
         position: relative;
-        top: 100px;
+        top: 100em;
       }
       
       .content {
-        margin-top: 40px;
+        margin-top: 0px;
         height: 100px;
       }
     }
@@ -349,9 +357,9 @@
     /* Desktop/Laptop View */
     @media screen and (min-width: 1024px) {
       #cake {
-                margin: -9em auto 0 auto;
-
         transform: scale(1);
+        margin: -7em auto 0 auto;
+
       }
       
       .content h2 {
@@ -362,10 +370,10 @@
         height: 150px;
         margin-top: 0px;
       }
-      .cake {
-        position: absolute;
-        top: 100px;
-      }
+      /* .cake {
+        position: relative;
+        top: 100px;      
+      } */
     }
 
     /* Large Desktop View */
@@ -383,7 +391,7 @@
       }
     }
     .cake {
-        position: relative ;
+        /* position: relative ; */
         top: 300px;
       }
 
@@ -401,6 +409,7 @@
       }
       
       .content {
+        
         margin-top: 10px;
         height: 50px;
       }
@@ -601,9 +610,9 @@
   <div class="balloon" style="left: 40%; animation-delay: 1s;"></div>
 
   <script>
-    const colors = ['red', 'blue', 'yellow', 'green', 'purple', 'orange'];
+    const colors = ['red', 'blue', 'yellow', 'green', 'purple', 'orange','white','aqua','blueviolet','chartreuse'];
     // Create responsive balloons based on screen size
-    const balloonCount = window.innerWidth < 768 ? 10 : 20;
+    const balloonCount = window.innerWidth < 768 ? 30 : 20;
     
     for (let i = 0; i < balloonCount; i++) {
       const balloon = document.createElement('div');
@@ -616,12 +625,12 @@
       balloon.style.background = colors[Math.floor(Math.random() * colors.length)];
       
       // Stagger animation timing
-      balloon.style.animationDelay = `${Math.random() * 10}s`;
+      balloon.style.animationDelay = `${Math.random() * 5}s`;
       
       // Adjust balloon size based on screen
       if (window.innerWidth < 768) {
-        balloon.style.width = '20px';
-        balloon.style.height = '30px';
+        balloon.style.width = '25px';
+        balloon.style.height = '40px';
       }
       
       document.body.appendChild(balloon);
